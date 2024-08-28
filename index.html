@@ -6,12 +6,44 @@
     <title>To-Do-List</title>
     <link rel="icon" href="./assets/imgs/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
     <header>
-      <img src="./assets/imgs/Logo.png" alt="logo to-do-list" />
+      <h1>To-do-list</h1>
+      <p>STAY ORGANIZED</p>
     </header>
+    <main>
+      <form>
+        <input type="text" placeholder="Crea la nuova task" />
+        <button type="submit"><i class="fa-solid fa-plus"></i></button>
+      </form>
+      <div class="to-do-container">
+        <h2>To-Do</h2>
+        <div class="task">
+          <p>andare a scuola</p>
+          <input type="checkbox" name="" id="" />
+        </div>
+      </div>
+      <div class="done-container">
+        <h2>Done</h2>
+        <div class="task">
+          <p>andare a scuola</p>
+          <input type="checkbox" name="" id="" />
+        </div>
+        <div class="task">
+          <p>andare a scuola</p>
+          <input type="checkbox" name="" id="" checked />
+        </div>
+      </div>
+    </main>
 
     <script src="./assets/js/script.js"></script>
   </body>
