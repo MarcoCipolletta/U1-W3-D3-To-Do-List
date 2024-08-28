@@ -23,15 +23,6 @@ form.onsubmit = function (event) {
 };
 
 // controllo se to-do-list o done-list sono vuoti e se si faccio display none
-const checkContainers = () => {
-  if (toDoContainer.children.length === 1) {
-    toDoContainer.style.display = "none";
-  }
-
-  if (doneContainer.children.length === 1) {
-    doneContainer.style.display = "none";
-  }
-};
 
 //sposto la task dalla to-do-list alla done-list
 
@@ -43,23 +34,22 @@ toDoContainer.onclick = function (event) {
 
   const trashIconContainer = document.createElement("div");
   trashIconContainer.innerHTML = `<span><i class="fa-solid fa-trash"></i></span>`;
-  trashIconContainer.id = "cestino";
+  trashIconContainer.onclick = () => {
+    targetTask.remove();
+    if (doneContainer.children.length === 1) {
+      doneContainer.style.display = "none";
+    }
+  };
   targetTask.appendChild(trashIconContainer);
 
+  doneContainer.style.display = "block";
   doneContainer.appendChild(targetTask);
   targetTask.classList.add("checked");
-  doneContainer.style.display = "block";
 
-  checkContainers();
-};
-
-//cancello la task con il cestino
-
-doneContainer.onclick = function (event) {
-  const targetTask = event.target.closest(".task");
-  if (event.target.closest("#cestino")) {
-    targetTask.remove();
-  }
-
-  checkContainers();
+  const checkContainer = () => {
+    if (toDoContainer.children.length === 1) {
+      toDoContainer.style.display = "none";
+    }
+  };
+  checkContainer();
 };
