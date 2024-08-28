@@ -86,3 +86,49 @@ form button:hover {
   color: #fafafa;
   font-size: 2.25rem;
 }
+
+/* to do container */
+.lists-container {
+  padding: 0.5rem 1rem;
+  text-align: start;
+}
+
+.lists-container h2 {
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+  color: #97d0fe;
+}
+
+.task {
+  background-color: #6b9ab6;
+  border-radius: 7px;
+  padding: 0.6rem 0.9rem;
+  margin-block: 1rem;
+}
+
+.task div {
+  display: inline-block;
+  width: 80%;
+  text-align: end;
+}
+.task div span {
+  display: inline-block;
+}
+
+.task p {
+  display: inline;
+}
+
+.checked {
+  text-decoration: line-through;
+  font-style: italic;
+}
+
+/* nascondo i task all' inzio */
+
+#to-do-container {
+  display: none;
+}
+#done-container {
+  display: none;
+}
