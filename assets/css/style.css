@@ -104,12 +104,13 @@ form button:hover {
   border-radius: 7px;
   padding: 0.6rem 0.9rem;
   margin-block: 1rem;
+  position: relative;
 }
 
 .task div {
   display: inline-block;
-  width: 80%;
-  text-align: end;
+  position: absolute;
+  right: 1rem;
 }
 .task div span {
   display: inline-block;
