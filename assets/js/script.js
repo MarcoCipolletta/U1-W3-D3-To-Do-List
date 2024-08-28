@@ -22,9 +22,7 @@ form.onsubmit = function (event) {
   document.getElementById("text-input").value = "";
 };
 
-// controllo se to-do-list o done-list sono vuoti e se si faccio display none
-
-//sposto la task dalla to-do-list alla done-list
+//sposto la task dalla to-do-list alla done-list, aggiungo il cestino e se to-do o done rimangono vuoti metto display none
 
 const toDoContainer = document.getElementById("to-do-container");
 const doneContainer = document.getElementById("done-container");
